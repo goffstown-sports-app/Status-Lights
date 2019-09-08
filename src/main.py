@@ -17,7 +17,7 @@ def main():
     gpio_config.output(17, gpio_config.HIGH)
     sleep(5)
     gpio_config.output(17, gpio_config.LOW)
-    gpio_condig.cleanup()
+    gpio_config.cleanup()
 
 
 
