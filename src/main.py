@@ -15,13 +15,13 @@ def main():
     """
     pins = {"Scrape-Calendar-Data": {"red": 4, "green": 17},
             "Server-Monitor": {"red": 18, "green": 23}}
+    pin_numbers = [4, 17, 18, 23]
     gpio_config.setmode(gpio_config.BCM)
-    for service in pins:
-        for pin in pins[service].values():
-            gpio_config.setup(pin, gpio_config.OUT)
-            gpio_config.output(pin, gpio_config.HIGH)
-            sleep(0.2)
-            gpio_config.output(pin, gpio_config.LOW)
+    for pin in pin_numbers:
+        gpio_config.setup(pin, gpio_config.OUT)
+        gpio_config.output(pin, gpio_config.HIGH)
+        sleep(0.2)
+        gpio_config.output(pin, gpio_config.LOW)
     cred = credentials.Certificate("firestore_creds.json")
     firebase_admin.initialize_app(
         cred, {
@@ -34,7 +34,7 @@ def main():
     second_diff = 2
     database.set_monitoring_info(False, second_diff)
     while True:
-        ref = db.reference("db-info/statuses")
+        ref = db.reference("db-info/statuses").get()
         for service in pins:
             service_status = ref[service]["online"]
             if service_status:
