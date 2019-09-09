@@ -38,11 +38,11 @@ def main():
         for service in pins:
             service_status = ref[service]["online"]
             if service_status:
-                gpio_config.output(pins[service]["green"], GPIO.HIGH)
-                gpio_config.output(pins[service]["green"], GPIO.LOW)
+                gpio_config.output(pins[service]["green"], gpio_config.HIGH)
+                gpio_config.output(pins[service]["green"], gpio_config.LOW)
             else:
-                gpio_config.output(pins[service]["green"], GPIO.LOW)
-                gpio_config.output(pins[service]["green"], GPIO.HIGH)
+                gpio_config.output(pins[service]["green"], gpio_config.LOW)
+                gpio_config.output(pins[service]["green"], gpio_config.HIGH)
         pulse_amount += 1
         database.update_pulse(pulse_amount, "Status-Lights")
 
