@@ -12,7 +12,7 @@ def set_monitoring_info(email_notifications, pulse_time_diff_secs):
     Returns:
         dict -- what the monitoring info was set as
     """
-    ref = db.reference("db-info/monitoring/Server-Monitor")
+    ref = db.reference("db-info/monitoring/Status-Lights")
     ref_set = {
         "email-notification": email_notifications,
         "pulse-time-diffs-(secs)": pulse_time_diff_secs + 300,
