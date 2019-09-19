@@ -36,7 +36,7 @@ def main():
     while True:
         current_time = datetime.datetime.now()
         ref = db.reference("db-info/statuses").get()
-        if current_time.hour >= 23 and current_time.hour <= 5:
+        if current_time.hour >= 23 or current_time.hour <= 5:
             for service in pins:
                 gpio_config.output(pins[service]["green"], gpio_config.LOW)
                 gpio_config.output(pins[service]["red"], gpio_config.LOW)
