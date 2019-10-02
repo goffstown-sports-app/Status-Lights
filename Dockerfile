@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install Depencies
 RUN pip install --no-cache-dir rpi.gpio
-RUN pip intall firebase_admin
+RUN pip install firebase_admin
 
 # Copying over files
 COPY /src /src
