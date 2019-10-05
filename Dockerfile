@@ -2,8 +2,7 @@
 FROM arm32v7/python:3.6-stretch
 
 # Meta for Docker Hub
-LABEL description="🍇 Status lights for each program using LEDs connected to a RPI"
-LABEL maintainer="matthewgleich@gmail.com"
+MAINTAINER matthewgleich@gmail.com
 
 # Fixing timezone:
 ENV TZ=America/New_York
