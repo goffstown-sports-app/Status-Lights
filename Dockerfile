@@ -14,7 +14,7 @@ RUN pip install firebase_admin
 
 # Copying over files
 COPY /src /src
-RUN rm -f /src/firestore_creds.json
+RUN find . -name \*.json -type f -delete
 WORKDIR /src
 
 # Running program
