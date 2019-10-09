@@ -1,7 +1,7 @@
 # Status Lights
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ghsapp/status-lights)
-![Docker Pulls](https://img.shields.io/docker/pulls/ghsapp/status-lights)
+![Docker Pulls](https://img.shields.io/docker/pulls/goffstown-sports-app/Status-Lights)
 
 ## Description
 Simple program that will turn off a red or green led based off if the prgram is running or not. The LEDs are hooked up to a Raspberry Pi 3
@@ -17,4 +17,4 @@ For the calandar data scraping program, connect a red LED to gpio pin 4, and a g
 
 ## Contributors
 - Matthew Gleich (@Matt-Gleich)
-- Freddy Matthews
+- Freddy Matthews (@Freddy0001)
