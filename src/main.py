@@ -6,8 +6,6 @@ from time import sleep
 import RPi.GPIO as gpio_config
 from ghsTools import ghsTools
 
-import database
-
 
 def main():
     """
@@ -47,7 +45,8 @@ def main():
             for service in pins:
                 service_status = ref[service]["online"]
                 if service_status:
-                    gpio_config.output(pins[service]["green"], gpio_config.HIGH)
+                    gpio_config.output(
+                        pins[service]["green"], gpio_config.HIGH)
                     gpio_config.output(pins[service]["red"], gpio_config.LOW)
                 else:
                     gpio_config.output(pins[service]["green"], gpio_config.LOW)
@@ -55,6 +54,7 @@ def main():
             pulse_amount += 1
             ghsTools.update_pulse(pulse_amount, "Server-Monitor")
             sleep(2)
+
 
 if __name__ == "__main__":
     main()
