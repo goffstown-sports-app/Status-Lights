@@ -31,7 +31,7 @@ def main():
         })
     pulse_amount = 0
     second_diff = 2
-    ghsTools().set_monitoring_info(True, second_diff, "Server-Monitor")
+    ghsTools().set_monitoring_info(True, second_diff, "Status")
     while True:
         current_time = datetime.datetime.now()
         ref = db.reference("db-info/statuses").get()
@@ -52,7 +52,7 @@ def main():
                     gpio_config.output(pins[service]["green"], gpio_config.LOW)
                     gpio_config.output(pins[service]["red"], gpio_config.HIGH)
             pulse_amount += 1
-            ghsTools().update_pulse(pulse_amount, "Server-Monitor")
+            ghsTools().update_pulse(pulse_amount, "Status-Lights")
             sleep(2)
 
 
