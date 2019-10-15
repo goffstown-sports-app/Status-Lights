@@ -31,7 +31,7 @@ def main():
         })
     pulse_amount = 0
     second_diff = 2
-    ghsTools().set_monitoring_info(True, second_diff, "Status")
+    ghsTools().set_monitoring_info(True, second_diff, "Status-Lights")
     while True:
         current_time = datetime.datetime.now()
         ref = db.reference("db-info/statuses").get()
