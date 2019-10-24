@@ -39,7 +39,6 @@ def main():
             for service in pins:
                 gpio_config.output(pins[service]["green"], gpio_config.LOW)
                 gpio_config.output(pins[service]["red"], gpio_config.LOW)
-            pulse_amount = 0
             sleep(60)
         else:
             for service in pins:
@@ -51,9 +50,9 @@ def main():
                 else:
                     gpio_config.output(pins[service]["green"], gpio_config.LOW)
                     gpio_config.output(pins[service]["red"], gpio_config.HIGH)
-            pulse_amount += 1
-            ghsTools().update_pulse(pulse_amount, "Status-Lights")
             sleep(2)
+        pulse_amount += 1
+        ghsTools().update_pulse(pulse_amount, "Status-Lights")
 
 
 if __name__ == "__main__":
