@@ -16,5 +16,5 @@ Firebase
 For the calendar data scraping program, connect a red LED to gpio pin 4, and a green LED to gpio pin 17. For the server monitor connect a red LED to gpio pin 18, and a green LED to gpio pin 23.
 
 ## Contributors
-- Matthew Gleich (![@Matt-Gleich!](https://github.com/Matt-Gleich))
-- Freddy Matthews (![@Freddy0001](https://github.com/Freddy0001))
+- Matthew Gleich ([@Matt-Gleich](https://github.com/Matt-Gleich))
+- Freddy Matthews ([@Freddy0001](https://github.com/Freddy0001))
