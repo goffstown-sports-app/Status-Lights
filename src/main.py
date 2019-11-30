@@ -7,3 +7,5 @@ def main():
     blinkt.show()
     while True:
         pass
+
+main()
