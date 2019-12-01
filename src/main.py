@@ -3,10 +3,22 @@ from time import sleep
 
 def main():
     blinkt.clear()
-    blinkt.set_all(20, 181, 14)
-    blinkt.show()
-    blinkt.set_clear_on_exit(value=True)
     while True:
-        pass
+        # Green on
+        for light in range(7):
+            blinkt.set_pixel(light, 0, 250, 0, 0.1)
+            sleep(0.5)
+        # Green off
+        for light in range(7):
+            blinkt.set_pixel(light, 0, 250, 0, 0)
+            sleep(0.5)
+        # Red on
+        for light in range(7):
+            blinkt.set_pixel(light, 250, 0, 0, 0.1)
+            sleep(0.5)
+        # Red off
+        for light in range(7):
+            blinkt.set_pixel(light, 250, 0, 0, 0)
+            sleep(0.5)
 
 main()
