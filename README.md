@@ -7,7 +7,7 @@
 Simple program that will turn off a red or green LED based off if the program is running or not. The LEDs are hooked up to a Raspberry Pi 3.
 
 ## Features
-Check program status and visually display whether or not it is working.
+* Check program status and visually display whether or not it is working.
 
 ## Requirements
 Firebase
