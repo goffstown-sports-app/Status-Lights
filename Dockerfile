@@ -13,9 +13,9 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 # Copying over files
-COPY /src /src
+COPY /statusLights /statusLights
 RUN find . -name \*.json -type f -delete
-WORKDIR /src
+WORKDIR /statusLights
 
 # Running program
 CMD ["python3", "main.py"]
