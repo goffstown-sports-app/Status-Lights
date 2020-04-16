@@ -17,4 +17,3 @@ For the calendar data scraping program, connect a red LED to gpio pin 4, and a g
 
 ## Contributors
 - Matthew Gleich ([@Matt-Gleich](https://github.com/Matt-Gleich))
-- Freddy Matthews ([@Freddy0001](https://github.com/Freddy0001))
